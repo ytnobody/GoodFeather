@@ -1,0 +1,21 @@
+on 'test' => sub {
+    requires 'Test::More' => 0;
+};
+requires 'Nephia' => 0;
+requires 'Plack::Middleware::Static' => 0;
+requires 'Plack::Middleware::Session' => 0;
+requires 'Plack::Middleware::CSRFBlock' => 0;
+requires 'Cache::Memcached::Fast' => 0;
+requires 'DBI' => 0;
+requires 'DBD::SQLite' => 0;
+requires 'DBD::mysql' => 0;
+requires 'Data::Page::Navigation' => 0;
+requires 'Otogiri' => 0;
+requires 'Nephia::Plugin::Dispatch' => 0.03;
+requires 'Nephia::Plugin::FillInForm' => 0;
+requires 'Nephia::Plugin::JSON' => 0.03;
+requires 'Nephia::Plugin::ResponseHandler' => 0;
+requires 'Nephia::Plugin::View::Xslate' => 0;
+requires 'Nephia::Plugin::ErrorPage' => 0;
+requires 'Nephia::Plugin::FormValidator::Lite' => 0;
+requires 'Nephia' => 0.87;

@@ -1,0 +1,7 @@
+[% WRAPPER 'include/layout.tt' WITH title = code _ ' ' _ message %]
+  <div class="alert alert-block">
+     <h2 class="alert-heading">[% code %]</h1>
+     [% message %]
+  </div>
+[% END %]
+
