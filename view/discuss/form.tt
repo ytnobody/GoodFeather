@@ -1,0 +1,16 @@
+[% WRAPPER 'include/layout.tt' %]
+<div class="container">
+  <div class="hero-unit">
+    <h2>Create a new discuss</h2>
+    <form>
+      <div class="row" style="text-align:center;">
+        <input type="text" maxlength="32" placeholder="Your Name" name="post_by" class="span2">
+        <input type="text" maxlength="140" placeholder="Description of Method" name="description" class="span8">
+      </div>
+      <div class="row" style="text-align:center;">
+        <input type="submit" value="Submit" class="btn btn-large btn-info">
+      </div>
+    </form>
+  </div>
+</div>
+[% END %]

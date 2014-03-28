@@ -41,6 +41,9 @@ sub c () {Nephia::Incognito->unmask(__PACKAGE__)}
 
 app {
     get  '/' => Nephia->call('C::Root#index');
+    get  '/discuss/form' => Nephia->call('C::Discuss#form');
+    get  '/discuss/:id' => Nephia->call('C::Discuss#detail');
+
     get  '/api/discuss/create' => Nephia->call('C::API::Discuss#create');
     get  '/api/discuss/search' => Nephia->call('C::API::Discuss#search');
     get  '/api/discuss/recent' => Nephia->call('C::API::Discuss#recent');

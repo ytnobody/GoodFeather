@@ -1,5 +1,6 @@
 <a class="brand" href="/">GoodFeather</a>
 <ul class="nav">
   <li><a href="/">top</a></li>
+  <li><a href="/discuss/form">create a new discuss</a></li>
 </ul>
 
