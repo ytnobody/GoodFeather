@@ -1,0 +1,17 @@
+[% WRAPPER 'include/layout.tt' %]
+<div class="container">
+  <div class="row discuss">
+    <h3 class="title">#[% discuss.id %] [% discuss.name || '(noname)'%]</h3>
+    <p class="description">[% discuss.description %]</p>
+  </div>
+  <div class="comments">
+  [% UNLESS discuss.comments.0 %]<p class="note">(empty comments for this discuss)</p>[% END %]
+  [% FOR comment IN discuss.comments %]
+    <dl class="comment">
+      <dt>[% comment.post_by %] [% comment.created_at %]</dt>
+      <dd>[% comment.body %]</dd>
+    </dl>
+  [% END %]
+  </div>
+</div>
+[% END %]

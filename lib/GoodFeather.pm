@@ -47,8 +47,9 @@ app {
     get  '/api/discuss/create' => Nephia->call('C::API::Discuss#create');
     get  '/api/discuss/search' => Nephia->call('C::API::Discuss#search');
     get  '/api/discuss/recent' => Nephia->call('C::API::Discuss#recent');
-    get  '/api/discuss/:id/add_name' => Nephia->call('C::API::Discuss#add_name');
     get  '/api/discuss/:id' => Nephia->call('C::API::Discuss#fetch');
+    post '/api/discuss/:id/name' => Nephia->call('C::API::Discuss#add_name');
+    post '/api/discuss/:id/comment' => Nephia->call('C::API::Discuss#add_comment');
 };
 
 1;

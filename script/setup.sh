@@ -1,5 +1,6 @@
 #!/bin/sh
 carton install &&
-sqlite3 ./var/db.sqlite3 < ./sql/create.sql &&
+echo 'CREATE DATABASE good_feather' | mysql -u root &&
+mysql -u root good_feather < ./sql/mysql.sql &&
 echo 'SETUP DONE.'
 

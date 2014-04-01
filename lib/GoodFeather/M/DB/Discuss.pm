@@ -3,6 +3,7 @@ use strict;
 use warnings;
 use parent 'GoodFeather::M::DB';
 use Carp;
+use GoodFeather::M::DB::Comment;
 
 sub table { 'discuss' }
 
@@ -16,7 +17,12 @@ sub create {
 
 sub fetch {
     my ($class, $id) = @_;
-    $class->single(id => $id);
+    my $discuss = $class->single(id => $id);
+    if (defined $discuss) {
+        my @comments = GoodFeather::M::DB::Comment->search_by_discuss_id($id);
+        $discuss->{comments} = [@comments];
+    }
+    $discuss;
 }
 
 sub search_by_word {

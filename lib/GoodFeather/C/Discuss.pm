@@ -10,9 +10,9 @@ sub form {
 }
 
 sub detail {
-    my $c = shift;
+    my ($c, $context) = @_;
     my $id = $c->path_param('id');
-    my $discuss = GoodFeather::M::DB::Discuss->fetch($id) || return $c->res_404;
+    my $discuss = GoodFeather::M::DB::Discuss->fetch($id) or return $c->res_404;
     {template => 'discuss/detail.tt', discuss => $discuss};
 }
 
